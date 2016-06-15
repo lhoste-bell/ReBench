@@ -492,7 +492,7 @@ class CodespeedReporter(Reporter):
                      + response)
 
     def _send_to_codespeed(self, results):
-        payload = urllib.urlencode({'json': json.dumps(results)})
+        payload = urllib.urlencode(json.dumps(results))
 
         try:
             self._send_payload(payload)
